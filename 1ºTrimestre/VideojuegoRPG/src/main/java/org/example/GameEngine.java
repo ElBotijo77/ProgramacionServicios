@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -8,16 +9,17 @@ public class GameEngine {
     public static void runApp(){
 
         Scanner sc = new Scanner(System.in);
-        List<Enemigo> ejercito = List.of(new Enemigo("Primero"), new Enemigo("Segundo"),
+        List<Personaje> ejercito = List.of(new Enemigo("Primero"), new Enemigo("Segundo"),
                 new Enemigo("Tercero"), new Enemigo("Cuarto"));
 
-        System.out.println("---------------------------\n Videojuego RPG\n---------------------------");
-        System.out.println("Di tu nombre: ");
-        Jugador j1 = new Jugador(sc.nextLine());
-        
-        //Aqui ira el manejo de turnos
 
-        System.out.println(j1.toString());
+        System.out.println("---------------------------\n Videojuego RPG\n---------------------------");
+        List<Jugador> jugadores = TurnManager.creacionPersonajes();
+
+
+        //Aqui ira el manejo de turnos
+        TurnManager.muestraCaracteristicas(jugadores, ejercito);
+
 
     }
 }

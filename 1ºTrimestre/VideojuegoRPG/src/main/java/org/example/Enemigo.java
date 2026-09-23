@@ -1,8 +1,6 @@
 package org.example;
 
-import java.util.Random;
-
-public class Enemigo extends Npc{
+public class Enemigo extends Personaje {
 
     // CONTRUCTOR
     public Enemigo(String nombre) {

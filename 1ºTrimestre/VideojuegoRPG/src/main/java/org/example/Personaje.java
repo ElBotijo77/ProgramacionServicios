@@ -2,13 +2,13 @@ package org.example;
 
 import java.util.Random;
 
-public class Npc {
+public class Personaje {
 
     private String nombre = "";
     private int puntosAtaque = 0;
     private int puntosSalud = 20;
 
-    public Npc(String nombre) {
+    public Personaje(String nombre) {
         this.nombre = nombre;
     }
 

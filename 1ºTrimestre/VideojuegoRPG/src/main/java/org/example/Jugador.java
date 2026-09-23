@@ -1,8 +1,6 @@
 package org.example;
 
-import java.util.Random;
-
-public class Jugador extends Npc{
+public class Jugador extends Personaje {
 
     private int dinero = 2;
 
