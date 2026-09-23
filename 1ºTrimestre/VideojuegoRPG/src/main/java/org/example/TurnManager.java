@@ -7,6 +7,33 @@ import java.util.Scanner;
 
 public class TurnManager {
 
+    public static void siguienteTurno (){
+
+    }
+
+    public void generaAtaques(List<Jugador> jugadores, List<Personaje> enemigos) {
+        Scanner sc = new Scanner(System.in);
+        boolean eleccion = true;
+
+        for (Personaje p : jugadores) {
+            p.calcularFuerzaInicial();
+
+            while(eleccion){
+                try {
+                    System.out.println("\nJugador " + p.getNombre() + ", quieres cambiar el ataque por una moneda?");
+                    
+
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+
+            }
+        }
+        for (Personaje p : enemigos) {
+            p.calcularFuerzaInicial();
+        }
+    }
+
     public static List<Jugador> creacionPersonajes(){
        List<Jugador> lista = new ArrayList<>();
        Scanner sc = new Scanner(System.in);

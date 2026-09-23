@@ -15,11 +15,15 @@ public class GameEngine {
 
         System.out.println("---------------------------\n Videojuego RPG\n---------------------------");
         List<Jugador> jugadores = TurnManager.creacionPersonajes();
-
-
-        //Aqui ira el manejo de turnos
         TurnManager.muestraCaracteristicas(jugadores, ejercito);
 
-
+        // Altamente improbable que hayan mas turnos que el maximo de un INT
+        for(int i= 0; i < Integer.MAX_VALUE; i++){
+            if(jugadores.isEmpty()) {
+                System.out.println("---------------------------\n FIN DE LA PARTIDA\n---------------------------");
+                break;
+            }
+            TurnManager.siguienteTurno();
+        }
     }
 }
